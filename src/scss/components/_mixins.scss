@@ -1,0 +1,33 @@
+@mixin align-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin responsive-xsm() {
+  @media screen and (max-width: 420px) {
+    @content;
+  }
+}
+
+@mixin responsive-sm() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin responsive-md() {
+  @media screen and (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin responsive-lg() {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin responsive-xlg() {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}

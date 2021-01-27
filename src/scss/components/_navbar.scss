@@ -1,0 +1,116 @@
+.navbar {
+  height: var(--nav-size);
+  font-size: 1.2rem;
+  @include align-center();
+  @include responsive-md() {
+    position: relative;
+  }
+  &__logo {
+    color: #fff;
+    justify-self: start;
+    font-family: 'Potta One', cursive;
+    span {
+      color: var(--primary);
+    }
+    @include responsive-sm() {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(25%, 50%);
+    }
+    svg {
+      margin-left: 0.5rem;
+      transform: translateY(3px);
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+  }
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+    @include responsive-sm() {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 500px;
+      position: absolute;
+      top: var(--nav-size);
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+    &--active {
+      @include responsive-sm() {
+        background: var(--bg-main);
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+      }
+    }
+  }
+  &__link {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    text-transform: capitalize;
+    @include responsive-sm() {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+    }
+    &--mobile {
+      display: none;
+    }
+  }
+  &__link:hover,
+  &__link:focus {
+    background-color: var(--primary);
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+    @include responsive-sm() {
+      background-color: var(--primary);
+      color: var(--white);
+      border-radius: 0;
+    }
+  }
+  &__toggle {
+    color: var(--white);
+    display: none;
+    background: none;
+    border: none;
+    @include responsive-sm() {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+  }
+  &__signup {
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--primary);
+    font-size: 1rem;
+    transition: all ease 0.3s;
+    cursor: pointer;
+  }
+  &__signup:hover,
+  &__signup:focus {
+    background: var(--primary);
+    color: var(--white);
+  }
+}

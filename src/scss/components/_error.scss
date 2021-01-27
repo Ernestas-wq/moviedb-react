@@ -1,0 +1,17 @@
+.error {
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  &__container {
+    text-align: center;
+    text-transform: capitalize;
+    h1 {
+      font-size: 40px;
+      color: var(--bg-main);
+      margin-bottom: 0.5rem;
+      @include responsive-sm() {
+        font-size: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+:root {
+  --bg-main: #282c35;
+  --white: #fff;
+  --primary: #637bff;
+  --primary-2: #7a348c;
+  --primary-3: #21c8f6;
+  --nav-size: 70px;
+  --spacing: 0.1rem;
+  --max-width: 1170px;
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--clr-bcg);
+  color: var(--clr-font);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+.btn {
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 0.45rem 0.8rem;
+  display: inline-block;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: transparent;
+  border-radius: 0.25rem;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn:hover {
+  background: var(--primary);
+  color: var(--white);
+}

@@ -1,0 +1,35 @@
+.search {
+  width: 90vw;
+  padding: 5rem 0 0 0;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  &__form {
+    display: flex;
+  }
+  &__input {
+    width: 100%;
+  }
+  &__input::placeholder {
+    color: var(--bg-main);
+  }
+  &__input,
+  &__submit {
+    padding: 0.75rem 1.25rem;
+    border: none;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    font-size: 1.5rem;
+    background: transparent;
+    color: var(--bg-main);
+    border-bottom: 3px solid var(--bg-main);
+    transition: all 0.5s ease-out;
+    outline: none;
+  }
+  &__input:focus {
+    border-bottom: 3px solid var(--primary);
+  }
+  &__input:focus + button {
+    border-bottom: 3px solid var(--primary);
+    color: var(--primary);
+  }
+}
