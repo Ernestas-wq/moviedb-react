@@ -7,14 +7,30 @@ const reducer = (state, action) => {
       return { ...state, searchValue: action.payload };
     }
     case 'ADD_TO_CART': {
+      const delete_id = new Date().getTime().toString();
+      const newItem = { ...action.payload, delete_id: delete_id };
       const newCart = {
         ...state.cart,
-        items: [...state.cart.items, action.payload],
+        items: [...state.cart.items, newItem],
         amount: state.cart.amount + 1,
       };
-
       return { ...state, cart: newCart };
     }
+    case 'REMOVE_FROM_CART': {
+      // console.log(action.payload);
+      console.log(state.cart.items);
+      console.log(action.payload);
+      const items = [...state.cart.items];
+      const newItems = items.filter(item => item.delete_id !== action.payload);
+      console.log(newItems);
+      const newCart = {
+        ...state.cart,
+        items: newItems,
+        amount: state.cart.amount - 1,
+      };
+      return { ...state, cart: newCart };
+    }
+
     default:
       throw new Error('No matching action type');
   }

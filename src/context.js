@@ -44,6 +44,7 @@ const AppProvider = ({ children }) => {
         isHomeOpen,
         setIsHomeOpen,
         addToCart,
+        removeFromCart,
       }}
     >
       {children}
