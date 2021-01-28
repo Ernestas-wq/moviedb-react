@@ -7,14 +7,16 @@ const Error = () => {
     setIsHomeOpen(false);
   }, []);
   return (
-    <section className="error">
-      <div className="error__container">
-        <h1>oops! it's a dead end</h1>
-        <Link to="/" className="btn">
-          back home
-        </Link>
-      </div>
-    </section>
+    <main>
+      <section className="error">
+        <div className="error__container">
+          <h1>oops! it's a dead end</h1>
+          <Link to="/" className="btn">
+            back home
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 };
 

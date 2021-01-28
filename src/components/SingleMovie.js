@@ -6,10 +6,9 @@ import useFetchMovies from '../utils/useFetchMovies';
 const noImageSub = 'https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png';
 
 const SingleMovie = () => {
-  const { setIsHomeOpen } = useGlobalContext();
+  const { setIsHomeOpen, cart, addToCart } = useGlobalContext();
   const { id } = useParams();
   const { isLoading, error, data: movie } = useFetchMovies(`&i=${id}`);
-  console.log(movie);
 
   useEffect(() => {
     setIsHomeOpen(false);
@@ -63,6 +62,9 @@ const SingleMovie = () => {
           <p>
             <span className="movie__data">votes :</span> {votes}
           </p>
+          <button className="btn" onClick={() => addToCart({ id, title, img })}>
+            Add To Cart
+          </button>
         </div>
       </div>
     </section>

@@ -26,15 +26,6 @@ const Movies = () => {
           </Link>
         );
       })}
-      {/* <Link className="movies__item">
-        <article>
-          <img src={noImageSub} alt="" />
-          <div className="movies__info">
-            <h4 className="movies__title">Some title 300</h4>
-            <p>1000</p>
-          </div>
-        </article>
-      </Link> */}
     </section>
   );
 };

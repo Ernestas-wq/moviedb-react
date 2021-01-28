@@ -1,6 +1,8 @@
 :root {
   --bg-main: #282c35;
   --white: #fff;
+  --white-2: #f1faee;
+  --red: #e63946;
   --primary: #637bff;
   --primary-2: #7a348c;
   --primary-3: #21c8f6;
@@ -42,5 +44,5 @@ body {
   color: var(--white);
 }
 main {
-  min-height: calc(70vh + var(--nav-size));
+  min-height: calc(70vh + 100px +var(--nav-size));
 }

@@ -7,6 +7,10 @@ const initialState = {
   loading: false,
   isSidebarOpen: false,
   searchValue: 'happy',
+  cart: {
+    amount: 0,
+    items: [],
+  },
 };
 
 const AppProvider = ({ children }) => {
@@ -20,8 +24,14 @@ const AppProvider = ({ children }) => {
   const searchMovie = value => {
     dispatch({ type: 'SEARCH_MOVIE', payload: value });
   };
+  const addToCart = movie => {
+    const { id, title, img } = movie;
+    dispatch({ type: 'ADD_TO_CART', payload: movie });
+  };
+  const removeFromCart = id => {
+    dispatch({ type: 'REMOVE_FROM_CART', payload: id });
+  };
 
-  console.log(process.env.REACT_APP_MOVIE_API_KEY);
   return (
     <AppContext.Provider
       value={{
@@ -33,6 +43,7 @@ const AppProvider = ({ children }) => {
         searchMovie,
         isHomeOpen,
         setIsHomeOpen,
+        addToCart,
       }}
     >
       {children}
