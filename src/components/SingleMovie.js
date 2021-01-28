@@ -65,9 +65,6 @@ const SingleMovie = () => {
           </p>
         </div>
       </div>
-      <Link to="/" className="btn">
-        back home
-      </Link>
     </section>
   );
 };

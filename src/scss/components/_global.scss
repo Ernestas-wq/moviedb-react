@@ -41,3 +41,6 @@ body {
   background: var(--primary);
   color: var(--white);
 }
+main {
+  min-height: calc(70vh + var(--nav-size));
+}

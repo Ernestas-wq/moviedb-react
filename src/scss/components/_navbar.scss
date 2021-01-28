@@ -23,6 +23,9 @@
       transform: translateY(3px);
       color: var(--primary);
       font-size: 1.5rem;
+      @include responsive-xsm() {
+        margin-left: 0.25rem;
+      }
     }
   }
   &__menu {
@@ -107,6 +110,10 @@
     font-size: 1rem;
     transition: all ease 0.3s;
     cursor: pointer;
+    @include responsive-xsm() {
+      padding: 8px 10px;
+      margin-left: 25px;
+    }
   }
   &__signup:hover,
   &__signup:focus {

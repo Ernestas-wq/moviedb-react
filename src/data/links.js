@@ -7,12 +7,4 @@ export const links = [
     title: 'about',
     url: '/about',
   },
-  {
-    title: 'Figure',
-    url: '#',
-  },
-  {
-    title: 'services',
-    url: '#',
-  },
 ];
