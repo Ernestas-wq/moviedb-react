@@ -13,12 +13,7 @@
     cursor: pointer;
   }
   &__message {
-    background: var(--white-2);
-    color: var(--red);
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    align-self: center;
+    @include modal-message();
   }
 }
 

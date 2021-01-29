@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useGlobalContext } from '../context';
 import { useParams, Link } from 'react-router-dom';
 import Loading from './Loading';
@@ -6,12 +6,16 @@ import useFetchMovies from '../utils/useFetchMovies';
 const noImageSub = 'https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png';
 
 const SingleMovie = () => {
+  const randomPrice = (Math.random() * 30).toFixed(2);
+
+  const [price, setPrice] = useState(randomPrice);
   const { setIsHomeOpen, cart, addToCart } = useGlobalContext();
   const { id } = useParams();
   const { isLoading, error, data: movie } = useFetchMovies(`&i=${id}`);
 
   useEffect(() => {
     setIsHomeOpen(false);
+    setPrice(randomPrice);
   }, []);
 
   if (isLoading) return <Loading />;
@@ -62,7 +66,10 @@ const SingleMovie = () => {
           <p>
             <span className="movie__data">votes :</span> {votes}
           </p>
-          <button className="btn" onClick={() => addToCart({ id, title, img })}>
+          <p>
+            <span className="movie__data">price: </span>${price}
+          </p>
+          <button className="btn" onClick={() => addToCart({ id, title, img, price })}>
             Add To Cart
           </button>
         </div>

@@ -25,7 +25,7 @@ const AppProvider = ({ children }) => {
     dispatch({ type: 'SEARCH_MOVIE', payload: value });
   };
   const addToCart = movie => {
-    const { id, title, img } = movie;
+    const { id, title, img, price } = movie;
     dispatch({ type: 'ADD_TO_CART', payload: movie });
   };
   const removeFromCart = id => {

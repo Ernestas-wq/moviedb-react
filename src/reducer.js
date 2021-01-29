@@ -17,12 +17,8 @@ const reducer = (state, action) => {
       return { ...state, cart: newCart };
     }
     case 'REMOVE_FROM_CART': {
-      // console.log(action.payload);
-      console.log(state.cart.items);
-      console.log(action.payload);
       const items = [...state.cart.items];
       const newItems = items.filter(item => item.delete_id !== action.payload);
-      console.log(newItems);
       const newCart = {
         ...state.cart,
         items: newItems,

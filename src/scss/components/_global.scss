@@ -3,6 +3,7 @@
   --white: #fff;
   --white-2: #f1faee;
   --red: #e63946;
+  --green: #06d6a0;
   --primary: #637bff;
   --primary-2: #7a348c;
   --primary-3: #21c8f6;
@@ -45,4 +46,10 @@ body {
 }
 main {
   min-height: calc(70vh + 100px +var(--nav-size));
+  h2 {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--primary);
+    font-size: 24px;
+  }
 }
