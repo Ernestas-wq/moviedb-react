@@ -7,7 +7,6 @@ const noImageSub = 'https://upload.wikimedia.org/wikipedia/commons/f/fc/No_pictu
 
 const Movies = () => {
   const { isLoading, movies } = useGlobalContext();
-  console.log(movies);
   if (isLoading) return <Loading />;
 
   return (

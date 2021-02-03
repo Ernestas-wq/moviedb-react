@@ -28,7 +28,7 @@ const Navbar = () => {
           const { url, title } = link;
           return (
             <li key={index}>
-              <Link to={url} className="navbar__link">
+              <Link to={url} className="navbar__link" onClick={toggleSidebar}>
                 {title}
               </Link>
             </li>

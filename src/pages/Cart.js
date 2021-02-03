@@ -38,7 +38,6 @@ const Cart = () => {
         {!cart.items.length > 0 && <h2>Your cart is empty</h2>}
         {cart.items.map((item, index) => {
           const { delete_id, img, title, price } = item;
-          // console.log(delete_id);
           return (
             <div key={index} className="cart__container">
               <div className="cart__image">
@@ -59,11 +58,11 @@ const Cart = () => {
             Check Out
           </button>
         </div>
-        {showMessage && (
-          <div className="cart__message">
-            <p>Oops! This doesn't actually do anything</p>
-          </div>
-        )}
+        <div
+          className={`${showMessage ? 'cart__message cart__message--active' : 'cart__message'} `}
+        >
+          <p>Oops! This doesn't actually do anything</p>
+        </div>
       </section>
     </main>
   );

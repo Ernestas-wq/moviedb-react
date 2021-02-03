@@ -16,6 +16,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
+    overflow: hidden;
   }
   &__container {
     width: 85vw;
@@ -41,10 +42,12 @@
         margin-top: 0.5rem;
       }
     }
-    button {
+    button,
+    a {
       margin-top: 1rem;
       align-self: start;
     }
+
     span {
       margin-right: 0.5rem;
     }
@@ -54,5 +57,23 @@
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     color: var(--white);
+  }
+  &__alert {
+    padding: 10px;
+    background: var(--white-2);
+    align-self: start;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out;
+    &--active {
+      transform: translateX(0);
+    }
+    p {
+      @include align-center();
+      color: var(--green);
+      font-size: 20px;
+      svg {
+        margin-left: 15px;
+      }
+    }
   }
 }

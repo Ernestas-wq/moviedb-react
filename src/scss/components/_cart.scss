@@ -3,6 +3,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   h1 {
     margin-top: 2rem;
     color: var(--bg-main);
@@ -14,8 +15,17 @@
     width: 30px;
     height: 40px;
     margin-right: 20px;
+    min-width: 40px;
+    min-height: 30px;
   }
   &__container {
+    width: 60%;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    align-items: center;
+    @include responsive-sm() {
+      width: 90%;
+    }
     h3 {
       font-size: 1rem;
       span {
@@ -24,10 +34,7 @@
         color: var(--green);
       }
     }
-    width: 60%;
-    margin: 2rem auto 0 auto;
-    display: flex;
-    align-items: center;
+
     button {
       text-transform: uppercase;
       letter-spacing: var(--spacing);
@@ -64,5 +71,10 @@
   }
   &__message {
     @include modal-message();
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in;
+    &--active {
+      transform: translateY(0);
+    }
   }
 }

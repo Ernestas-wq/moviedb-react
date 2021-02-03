@@ -38,12 +38,14 @@
       text-transform: uppercase;
       border: none;
       color: var(--white);
+      outline: none;
       background: var(--primary-3);
       cursor: pointer;
       border-radius: 10px;
       transition: all 0.3s ease-out;
     }
-    button:hover {
+    button:hover,
+    button:focus {
       background: var(--primary-2);
     }
   }
