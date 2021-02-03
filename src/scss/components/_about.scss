@@ -15,10 +15,14 @@
       line-height: 1.5rem;
       margin-top: 1rem;
       font-size: 16px;
+      @include responsive-sm() {
+        line-height: 2rem;
+      }
     }
   }
   &__bottom {
     margin-top: 2rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
