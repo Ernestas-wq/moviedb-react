@@ -34,6 +34,9 @@ const Navbar = () => {
             </li>
           );
         })}
+        <li>
+          <a href="https://ernestas-portfolio.netlify.app/">Portfolio</a>
+        </li>
       </ul>
       <Link to="/signup" className="navbar__signup">
         Sign Up

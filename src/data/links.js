@@ -7,8 +7,4 @@ export const links = [
     title: 'about',
     url: '/about',
   },
-  {
-    title: 'portfolio',
-    url: 'https://ernestas-portfolio.netlify.app/',
-  },
 ];
